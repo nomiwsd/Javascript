@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .flexCenter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+      }
+      section {
+        width: 100vw;
+        height: 100vh;
+      }
+      label {
+        text-align: center;
+        margin-bottom: 0.5 rem;
+      }
+      input {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5 rem;
+        margin-bottom: 0.5 rem;
+        width: 90vw;
+        letter-spacing: 5px;
+        border-radius: 25px;
+        outline: none;
+      }
+      .phoneFormat{
+        display: none;
+        text-align: center;
+        font-size: 0.75rem;
+      }
+      .block{
+        display: block;
+      }
+      .invalid{color: red;}
+    </style>
+    <script defer src="Regex.js"></script>
+  </head>
+  <body>
+    <main class="flexCenter">
+      <section class="phoneview flexCenter">
+        <form id="phoneForm" class="phoneForm flexCenter">
+          <label for="phoneNum">Please Enter Your Phone Number</label>
+          <input
+            type="text"
+            id="phoneNum"
+            class="phoneNum"
+            autocomplete="off"
+          />
+          <p class="phoneFormat">Examples:(555)555-5555 or 123-456-78999</p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
